@@ -2,10 +2,10 @@ package ua.ippt.oop.lab2.repository;
 
 import ua.ippt.oop.lab2.entity.Product;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface ProductRepository extends Repository<Product> {
-    Optional<Product> findById(Integer id);
+    List<Product> findById(Integer id);
 
-    Optional<Product> findByName(String name);
+    List<Product> findByName(String name);
 }

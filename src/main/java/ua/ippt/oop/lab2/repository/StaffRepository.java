@@ -2,10 +2,10 @@ package ua.ippt.oop.lab2.repository;
 
 import ua.ippt.oop.lab2.entity.Staff;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface StaffRepository extends Repository<Staff>{
-    Optional<Staff> findById(Integer id);
+    List<Staff> findById(Integer id);
 
-    Optional<Staff> findByName(String name);
+    List<Staff> findByName(String name);
 }

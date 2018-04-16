@@ -2,11 +2,11 @@ package ua.ippt.oop.lab2.repository;
 
 import ua.ippt.oop.lab2.entity.City;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface CityRepository extends Repository<City> {
 
-    Optional<City> findById(Integer id);
+    List<City> findById(Integer id);
 
-    Optional<City> findByName(String name);
+    List<City> findByName(String name);
 }

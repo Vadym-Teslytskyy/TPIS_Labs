@@ -14,7 +14,7 @@ public class Main {
     private static EntityManager em;
 
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ua.ippt.oop.lab2");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("primary");
         em = emf.createEntityManager();
         em.getTransaction().begin();
         persistEntities();
