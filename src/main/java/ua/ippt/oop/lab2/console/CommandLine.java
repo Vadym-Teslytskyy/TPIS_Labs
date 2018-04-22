@@ -186,12 +186,8 @@ public class CommandLine {
     public void addEquipment() {
         System.out.println("enter equipment name:");
         String name = scanner.next();
-        System.out.println("enter restaurant index:");
-        int rIndex = scanner.nextInt();
         Equipment equipment = new Equipment();
         equipment.setName(name);
-        Restaurant restaurant = restaurantRepository.getOne(rIndex);
-        equipment.setRestaurantList(Collections.singletonList(restaurant));
         equipmentRepository.save(equipment);
     }
 
@@ -206,12 +202,8 @@ public class CommandLine {
     public void addProduct() {
         System.out.println("enter product name:");
         String name = scanner.next();
-        System.out.println("enter restaurant index:");
-        int rIndex = scanner.nextInt();
         Product product = new Product();
         product.setName(name);
-        Restaurant restaurant = restaurantRepository.getOne(rIndex);
-        product.setRestaurantList(Collections.singletonList(restaurant));
         productRepository.save(product);
     }
 

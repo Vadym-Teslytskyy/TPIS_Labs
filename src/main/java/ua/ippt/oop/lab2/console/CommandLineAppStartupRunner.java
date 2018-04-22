@@ -9,7 +9,7 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
     @Autowired
     private CommandLine commandLine;
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args){
         commandLine.runMenu();
     }
 }
