@@ -15,6 +15,7 @@
         <project.reporting.outputEncoding>UTF-8
         </project.reporting.outputEncoding>
 
+        <java.version>1.8</java.version>
         <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
         <mysql.version>5.1.45</mysql.version>
     </properties>
@@ -47,7 +48,6 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
@@ -62,7 +62,6 @@
                     </executions>
                 </plugin>
             </plugins>
-        </pluginManagement>
     </build>
 
 </project>

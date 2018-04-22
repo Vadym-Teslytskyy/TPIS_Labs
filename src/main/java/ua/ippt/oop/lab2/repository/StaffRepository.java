@@ -7,6 +7,6 @@ import ua.ippt.oop.lab2.entity.Staff;
 import java.util.List;
 
 public interface StaffRepository extends JpaRepository<Staff,Integer> {
-    @Query("SELECT s FROM Staff s WHERE s.name=?1")
+    @Query("SELECT s FROM Staff s WHERE s.fullName=?1")
     List<Staff> findByName(String name);
 }
