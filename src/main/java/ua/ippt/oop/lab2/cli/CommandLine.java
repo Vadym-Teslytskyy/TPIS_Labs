@@ -102,6 +102,7 @@ public class CommandLine {
         System.out.println("enter restaurant chain name:");
         String name = scanner.next();
         RestaurantChain rc = restaurantChainRepository.getOne(id);
+        rc.setName(name);
         restaurantChainRepository.save(rc);
     }
 
