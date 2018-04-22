@@ -1,4 +1,4 @@
-package ua.ippt.oop.lab2.console;
+package ua.ippt.oop.lab2.cli;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
