@@ -1,8 +1,15 @@
 package ua.ippt.oop.lab2.entity;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "city")
 public class City {
@@ -20,44 +27,4 @@ public class City {
 
     @OneToMany(mappedBy = "city", fetch = FetchType.LAZY)
     private List<Restaurant> restaurantList;
-
-    public City(String name) {
-        this.name = name;
-    }
-
-    public City() {
-    }
-
-    public List<Restaurant> getRestaurantList() {
-        return restaurantList;
-    }
-
-    public void setRestaurantList(List<Restaurant> restaurantList) {
-        this.restaurantList = restaurantList;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
 }
