@@ -121,19 +121,9 @@ public class CommandLine {
         String name = scanner.next();
         System.out.println("enter restaurant chain index:");
         int rcIndex = scanner.nextInt();
-        System.out.println("enter equip index:");
-        int equipIndex = scanner.nextInt();
-        System.out.println("enter product index:");
-        int productIndex = scanner.nextInt();
-        System.out.println("enter staff index:");
-        int staffIndex = scanner.nextInt();
         Restaurant restaurant = new Restaurant();
         restaurant.setName(name);
         restaurant.setRestaurantChain(restaurantChainRepository.getOne(rcIndex));
-        restaurant.setEquipmentList(Collections.singletonList(equipmentRepository
-                                                                      .getOne(equipIndex)));
-        restaurant.setProductList(Collections.singletonList(productRepository.getOne(productIndex)));
-        restaurant.setStaffList(Collections.singletonList(staffRepository.getOne(staffIndex)));
         restaurantRepository.save(restaurant);
     }
 
@@ -186,8 +176,12 @@ public class CommandLine {
     public void addEquipment() {
         System.out.println("enter equipment name:");
         String name = scanner.next();
+        System.out.println("enter restaurant index:");
+        int rIndex = scanner.nextInt();
+        Restaurant restaurant = restaurantRepository.getOne(rIndex);
         Equipment equipment = new Equipment();
         equipment.setName(name);
+        equipment.setRestaurantList(Collections.singletonList(restaurant));
         equipmentRepository.save(equipment);
     }
 
@@ -202,8 +196,12 @@ public class CommandLine {
     public void addProduct() {
         System.out.println("enter product name:");
         String name = scanner.next();
+        System.out.println("enter restaurant index:");
+        int rIndex = scanner.nextInt();
+        Restaurant restaurant = restaurantRepository.getOne(rIndex);
         Product product = new Product();
         product.setName(name);
+        product.setRestaurantList(Collections.singletonList(restaurant));
         productRepository.save(product);
     }
 
