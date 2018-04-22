@@ -7,10 +7,6 @@ import ua.ippt.oop.lab2.entity.Product;
 import java.util.List;
 
 public interface ProductRepository extends JpaRepository<Product,Integer> {
-
-    @Query("SELECT p FROM Product p WHERE p.id=?1")
-    List<Product> findById(Integer id);
-
     @Query("SELECT p FROM Product p WHERE p.name=?1")
     List<Product> findByName(String name);
 }
